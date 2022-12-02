@@ -1,0 +1,17 @@
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\bin\Debug\net6.0-windows\Tienda2.exe
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\bin\Debug\net6.0-windows\Tienda2.deps.json
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\bin\Debug\net6.0-windows\Tienda2.runtimeconfig.json
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\bin\Debug\net6.0-windows\Tienda2.dll
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\bin\Debug\net6.0-windows\Tienda2.pdb
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.csproj.AssemblyReference.cache
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.Form1.resources
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.csproj.GenerateResource.cache
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.AssemblyInfoInputs.cache
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.AssemblyInfo.cs
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.csproj.CoreCompileInputs.cache
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.dll
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\refint\Tienda2.dll
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.pdb
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\Tienda2.genruntimeconfig.cache
+C:\Users\SibylSystem\Desktop\Code\AppTienda\Tienda2\Tienda2\obj\Debug\net6.0-windows\ref\Tienda2.dll
