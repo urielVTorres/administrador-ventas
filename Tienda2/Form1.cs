@@ -1,4 +1,5 @@
 using System.Configuration;
+using Tienda2.Inventario;
 
 namespace Tienda2
 {
@@ -58,10 +59,30 @@ namespace Tienda2
         //Botón para mostrar pestaña de inventario
         private void buttonInventario_Click(object sender, EventArgs e)
         {
+            //Mostrar la ventada de inventario
             panelNewClient.Visible = false;
             panelInventario.Visible = true;
             panelReporte.Visible = false;
             panelAgregarInventario.Visible = false;
+
+
+            StreamReader existencia = new StreamReader($@"..\..\..\Inventario\Existencia.txt");
+            int num = Int32.Parse(existencia.ReadLine());
+            existencia.Close();
+            listViewInventario.Items.Clear();
+            for (int i = 0; i < num; i++)
+            {
+                StreamReader producto = new StreamReader($@"..\..\..\Inventario\Productos\producto{i}.txt");
+                string aux = producto.ReadLine();
+                producto.Close();
+                string[] info = aux.Split(',');
+                Console.WriteLine(aux);
+                Console.WriteLine(info);
+                string[] arr = { info[0], info[1], info[3] };
+                ListViewItem prod = new ListViewItem(arr);
+                listViewInventario.Items.Add(prod);
+            }
+
         }
         //Botón para mostrar pestaña de agregar productos
         private void buttonAgregarInventario_Click(object sender, EventArgs e)
@@ -112,6 +133,22 @@ namespace Tienda2
 
         }
 
-
+        private void buttonAddInv_Click(object sender, EventArgs e)
+        {
+            string nombre = textBoxAgregarNombre.Text;
+            string barCode = textBoxAgregarCodigo.Text;
+            int cantidad = (int)numericUpDownAgregarPiezas.Value;
+            float precioP = float.Parse(textBoxAgregarPrecio.Text);
+            float precioU = Int32.Parse(textBoxAgregarPrecioUnitario.Text);
+            if(radioButtonNuevo.Checked == true)
+            {
+                Producto nuevo = new Producto(nombre, barCode, cantidad, precioP, precioU);
+                nuevo.AgregarInventario();
+            } else
+            {
+                MessageBox.Show("Producto Ya existe OMG!");
+            }
+            
+        }
     }
 }

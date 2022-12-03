@@ -30,7 +30,14 @@
         {
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelContenedorPaginas = new System.Windows.Forms.Panel();
+            this.panelInventario = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.listViewInventario = new System.Windows.Forms.ListView();
+            this.Index = new System.Windows.Forms.ColumnHeader();
+            this.Producto = new System.Windows.Forms.ColumnHeader();
+            this.Cantidad = new System.Windows.Forms.ColumnHeader();
             this.panelAgregarInventario = new System.Windows.Forms.Panel();
+            this.buttonAddInv = new System.Windows.Forms.Button();
             this.radioButtonExistente = new System.Windows.Forms.RadioButton();
             this.radioButtonNuevo = new System.Windows.Forms.RadioButton();
             this.numericUpDownAgregarPiezas = new System.Windows.Forms.NumericUpDown();
@@ -65,11 +72,6 @@
             this.textBusqueda = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBoxCarrito = new System.Windows.Forms.ListBox();
-            this.panelInventario = new System.Windows.Forms.Panel();
-            this.listViewInventario = new System.Windows.Forms.ListView();
-            this.Index = new System.Windows.Forms.ColumnHeader();
-            this.Producto = new System.Windows.Forms.ColumnHeader();
-            this.Cantidad = new System.Windows.Forms.ColumnHeader();
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.buttonReporte = new System.Windows.Forms.Button();
             this.buttonAgregarInventario = new System.Windows.Forms.Button();
@@ -82,13 +84,13 @@
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.panelContainer.SuspendLayout();
             this.panelContenedorPaginas.SuspendLayout();
+            this.panelInventario.SuspendLayout();
             this.panelAgregarInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAgregarPiezas)).BeginInit();
             this.panelReporte.SuspendLayout();
             this.panelNewClient.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panelInventario.SuspendLayout();
             this.panelSidebar.SuspendLayout();
             this.panelTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).BeginInit();
@@ -109,18 +111,80 @@
             // 
             // panelContenedorPaginas
             // 
-            this.panelContenedorPaginas.Controls.Add(this.panelAgregarInventario);
-            this.panelContenedorPaginas.Controls.Add(this.panelReporte);
             this.panelContenedorPaginas.Controls.Add(this.panelNewClient);
             this.panelContenedorPaginas.Controls.Add(this.panelInventario);
+            this.panelContenedorPaginas.Controls.Add(this.panelAgregarInventario);
+            this.panelContenedorPaginas.Controls.Add(this.panelReporte);
             this.panelContenedorPaginas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorPaginas.Location = new System.Drawing.Point(200, 100);
             this.panelContenedorPaginas.Name = "panelContenedorPaginas";
             this.panelContenedorPaginas.Size = new System.Drawing.Size(884, 461);
             this.panelContenedorPaginas.TabIndex = 3;
             // 
+            // panelInventario
+            // 
+            this.panelInventario.Controls.Add(this.label13);
+            this.panelInventario.Controls.Add(this.listViewInventario);
+            this.panelInventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelInventario.Location = new System.Drawing.Point(0, 0);
+            this.panelInventario.Name = "panelInventario";
+            this.panelInventario.Padding = new System.Windows.Forms.Padding(20);
+            this.panelInventario.Size = new System.Drawing.Size(884, 461);
+            this.panelInventario.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(369, 32);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(150, 40);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Inventario";
+            // 
+            // listViewInventario
+            // 
+            this.listViewInventario.AllowColumnReorder = true;
+            this.listViewInventario.AllowDrop = true;
+            this.listViewInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewInventario.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Index,
+            this.Producto,
+            this.Cantidad});
+            this.listViewInventario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listViewInventario.FullRowSelect = true;
+            this.listViewInventario.Location = new System.Drawing.Point(37, 98);
+            this.listViewInventario.Name = "listViewInventario";
+            this.listViewInventario.Size = new System.Drawing.Size(810, 311);
+            this.listViewInventario.Sorting = System.Windows.Forms.SortOrder.Descending;
+            this.listViewInventario.TabIndex = 8;
+            this.listViewInventario.TileSize = new System.Drawing.Size(10, 10);
+            this.listViewInventario.UseCompatibleStateImageBehavior = false;
+            this.listViewInventario.View = System.Windows.Forms.View.Details;
+            // 
+            // Index
+            // 
+            this.Index.Text = "Index";
+            this.Index.Width = 70;
+            // 
+            // Producto
+            // 
+            this.Producto.Text = "Producto";
+            this.Producto.Width = 550;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.Text = "Cantidad";
+            this.Cantidad.Width = 120;
+            // 
             // panelAgregarInventario
             // 
+            this.panelAgregarInventario.Controls.Add(this.buttonAddInv);
             this.panelAgregarInventario.Controls.Add(this.radioButtonExistente);
             this.panelAgregarInventario.Controls.Add(this.radioButtonNuevo);
             this.panelAgregarInventario.Controls.Add(this.numericUpDownAgregarPiezas);
@@ -140,20 +204,38 @@
             this.panelAgregarInventario.Size = new System.Drawing.Size(884, 461);
             this.panelAgregarInventario.TabIndex = 2;
             // 
+            // buttonAddInv
+            // 
+            this.buttonAddInv.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonAddInv.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAddInv.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.buttonAddInv.Location = new System.Drawing.Point(466, 361);
+            this.buttonAddInv.Name = "buttonAddInv";
+            this.buttonAddInv.Size = new System.Drawing.Size(323, 54);
+            this.buttonAddInv.TabIndex = 14;
+            this.buttonAddInv.Text = "Agregar al Inventario";
+            this.buttonAddInv.UseVisualStyleBackColor = false;
+            this.buttonAddInv.Click += new System.EventHandler(this.buttonAddInv_Click);
+            // 
             // radioButtonExistente
             // 
+            this.radioButtonExistente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButtonExistente.AutoSize = true;
             this.radioButtonExistente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButtonExistente.Location = new System.Drawing.Point(215, 306);
             this.radioButtonExistente.Name = "radioButtonExistente";
             this.radioButtonExistente.Size = new System.Drawing.Size(156, 25);
             this.radioButtonExistente.TabIndex = 13;
-            this.radioButtonExistente.TabStop = true;
             this.radioButtonExistente.Text = "Producto Existente";
             this.radioButtonExistente.UseVisualStyleBackColor = true;
             // 
             // radioButtonNuevo
             // 
+            this.radioButtonNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButtonNuevo.AutoSize = true;
             this.radioButtonNuevo.Checked = true;
             this.radioButtonNuevo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -167,6 +249,9 @@
             // 
             // numericUpDownAgregarPiezas
             // 
+            this.numericUpDownAgregarPiezas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownAgregarPiezas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.numericUpDownAgregarPiezas.Location = new System.Drawing.Point(669, 303);
             this.numericUpDownAgregarPiezas.Name = "numericUpDownAgregarPiezas";
@@ -175,6 +260,9 @@
             // 
             // textBoxAgregarPrecioUnitario
             // 
+            this.textBoxAgregarPrecioUnitario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAgregarPrecioUnitario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxAgregarPrecioUnitario.Location = new System.Drawing.Point(466, 238);
             this.textBoxAgregarPrecioUnitario.Name = "textBoxAgregarPrecioUnitario";
@@ -183,6 +271,9 @@
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.Location = new System.Drawing.Point(466, 201);
@@ -193,6 +284,9 @@
             // 
             // textBoxAgregarPrecio
             // 
+            this.textBoxAgregarPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAgregarPrecio.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxAgregarPrecio.Location = new System.Drawing.Point(466, 150);
             this.textBoxAgregarPrecio.Name = "textBoxAgregarPrecio";
@@ -201,6 +295,9 @@
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.Location = new System.Drawing.Point(466, 113);
@@ -211,6 +308,9 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.Location = new System.Drawing.Point(466, 305);
@@ -221,6 +321,9 @@
             // 
             // textBoxAgregarCodigo
             // 
+            this.textBoxAgregarCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAgregarCodigo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxAgregarCodigo.Location = new System.Drawing.Point(53, 238);
             this.textBoxAgregarCodigo.Name = "textBoxAgregarCodigo";
@@ -229,6 +332,9 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.Location = new System.Drawing.Point(53, 201);
@@ -239,6 +345,9 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(269, 32);
@@ -250,6 +359,9 @@
             // 
             // textBoxAgregarNombre
             // 
+            this.textBoxAgregarNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAgregarNombre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxAgregarNombre.Location = new System.Drawing.Point(53, 150);
             this.textBoxAgregarNombre.Name = "textBoxAgregarNombre";
@@ -258,6 +370,9 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(53, 113);
@@ -524,43 +639,6 @@
             this.listBoxCarrito.Size = new System.Drawing.Size(829, 175);
             this.listBoxCarrito.TabIndex = 6;
             // 
-            // panelInventario
-            // 
-            this.panelInventario.Controls.Add(this.listViewInventario);
-            this.panelInventario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelInventario.Location = new System.Drawing.Point(0, 0);
-            this.panelInventario.Name = "panelInventario";
-            this.panelInventario.Padding = new System.Windows.Forms.Padding(20);
-            this.panelInventario.Size = new System.Drawing.Size(884, 461);
-            this.panelInventario.TabIndex = 2;
-            // 
-            // listViewInventario
-            // 
-            this.listViewInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewInventario.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Index,
-            this.Producto,
-            this.Cantidad});
-            this.listViewInventario.Location = new System.Drawing.Point(37, 50);
-            this.listViewInventario.Name = "listViewInventario";
-            this.listViewInventario.Size = new System.Drawing.Size(810, 359);
-            this.listViewInventario.TabIndex = 8;
-            this.listViewInventario.UseCompatibleStateImageBehavior = false;
-            // 
-            // Index
-            // 
-            this.Index.Text = "Index";
-            // 
-            // Producto
-            // 
-            this.Producto.Text = "Producto";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.Text = "Cantidad";
-            // 
             // panelSidebar
             // 
             this.panelSidebar.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -720,6 +798,8 @@
             this.Text = "Form1";
             this.panelContainer.ResumeLayout(false);
             this.panelContenedorPaginas.ResumeLayout(false);
+            this.panelInventario.ResumeLayout(false);
+            this.panelInventario.PerformLayout();
             this.panelAgregarInventario.ResumeLayout(false);
             this.panelAgregarInventario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAgregarPiezas)).EndInit();
@@ -730,7 +810,6 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelInventario.ResumeLayout(false);
             this.panelSidebar.ResumeLayout(false);
             this.panelTopBar.ResumeLayout(false);
             this.panelTopBar.PerformLayout();
@@ -795,5 +874,7 @@
         private Label label10;
         private TextBox textBoxAgregarCodigo;
         private Label label9;
+        private Button buttonAddInv;
+        private Label label13;
     }
 }
